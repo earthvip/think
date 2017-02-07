@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div for="you_data">
+    <p>{{you_content}}</p>
+    <!--<p>{{you_title}}</p>-->
+    <!--<p>{{you_type}}</p>-->
+    <!--<p>{{you_id}}</p>-->
+    <hr>
+    <!--<td>-->
+        <!--<button onclick="console.info({{you_id}})">操作</button>-->
+    <!--</td>-->
+</div>
+</body>
+</html>
+<script src="you.js"></script>
+<script>
+    you_ajax(function (result) {
+        you_bind("you_data", result);
+    }, "select * from you where you_id=1");
+</script>
